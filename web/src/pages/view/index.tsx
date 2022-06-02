@@ -41,7 +41,7 @@ const View: React.FC<PageProps & { isInDrawer?: boolean; onCloseDrawer?: () => v
   return (
     <>
       {!data && !error ? (
-        <Layout style={{ paddingTop: '45vh', height: '100vh' }}>
+        <Layout style={{ paddingTop: '45vh', minHeight: '100vh' }}>
           <Spin />
         </Layout>
       ) : error || (data && data.file.upload_progress !== null) ? (
