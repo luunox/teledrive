@@ -1,14 +1,14 @@
 module.exports = {
   root: true,
   env: {
-    node: true
+    node: true,
   },
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint'],
   extends: [
     'eslint:recommended',
     // 'plugin:@typescript-eslint/eslint-recommended',
-    'plugin:@typescript-eslint/recommended'
+    'plugin:@typescript-eslint/recommended',
   ],
   rules: {
     '@typescript-eslint/naming-convention': [
@@ -16,12 +16,12 @@ module.exports = {
       {
         selector: 'variable',
         format: ['camelCase', 'UPPER_CASE', 'PascalCase'],
-        leadingUnderscore: 'allow'
+        leadingUnderscore: 'allow',
       },
       {
         selector: 'typeLike',
-        format: ['PascalCase']
-      }
+        format: ['PascalCase'],
+      },
     ],
     // '@typescript-eslint/indent': ['error', 2],
     '@typescript-eslint/prefer-namespace-keyword': 'error',
@@ -29,32 +29,32 @@ module.exports = {
       'error',
       'single',
       {
-        avoidEscape: true
-      }
+        avoidEscape: true,
+      },
     ],
-    '@typescript-eslint/semi': ['error', 'never'],
+    // '@typescript-eslint/semi': ['error', 'never'],
     '@typescript-eslint/type-annotation-spacing': 'error',
-    '@typescript-eslint/member-delimiter-style': [
-      'error',
-      {
-        multiline: {
-          delimiter: 'comma',
-          requireLast: false
-        },
-        singleline: {
-          delimiter: 'comma',
-          requireLast: false
-        }
-      }
-    ],
+    // '@typescript-eslint/member-delimiter-style': [
+    //   'error',
+    //   {
+    //     multiline: {
+    //       delimiter: 'comma',
+    //       requireLast: false,
+    //     },
+    //     singleline: {
+    //       delimiter: 'comma',
+    //       requireLast: false,
+    //     },
+    //   },
+    // ],
     '@typescript-eslint/no-unused-vars': [
       'off',
       {
         vars: 'all',
         args: 'all',
         varsIgnorePattern: '^_.*$',
-        argsIgnorePattern: '^_.*$'
-      }
+        argsIgnorePattern: '^_.*$',
+      },
     ],
     // '@typescript-eslint/no-extra-parens': 'error',
     '@typescript-eslint/brace-style': 'error',
@@ -79,9 +79,9 @@ module.exports = {
       {
         named: 'never',
         anonymous: 'always',
-        asyncArrow: 'always'
-      }
+        asyncArrow: 'always',
+      },
     ],
-    '@typescript-eslint/no-var-requires': 'off'
-  }
-}
+    '@typescript-eslint/no-var-requires': 'off',
+  },
+};
